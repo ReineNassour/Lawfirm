@@ -1,0 +1,130 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.payment-container {
+    padding: 40px 20px;
+}
+
+.payment-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.payment-header {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.payment-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.payment-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.payment-table th {
+    text-align: left;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    width: 40%;
+}
+
+.payment-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.payment-table input[type="text"],
+.payment-table input[type="number"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.payment-table input[type="text"]:focus,
+.payment-table input[type="number"]:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.status-accepted {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.btn-black {
+    background-color: #1a2236;
+    border-color: #1a2236;
+    color: white;
+    transition: all 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-black:hover {
+    background-color: #343a40;
+    border-color: #343a40;
+    color: white;
+}
+
+@media print {
+/* Hide all elements with class 'no-print' (like the header) during printing */
+.no-print {
+display: none !important;
+}
+
+/* Only print content from the payment-container down */
+body {
+background-color: white;
+}
+
+/* Hide the header (if it's part of the no-print class) */
+.payment-header {
+display: none; /* Hide the payment header during printing */
+}
+
+/* Any additional styling for print (for example, removing card shadow) */
+.payment-card {
+box-shadow: none;
+border: none;
+}
+
+/* Ensure payment-container is visible for print */
+.payment-container {
+display: block;
+}
+
+/* Hide the print button during printing */
+.no-print-button {
+display: none;
+}
+}

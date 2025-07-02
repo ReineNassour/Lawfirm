@@ -1,0 +1,95 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    padding: 40px 20px;
+}
+
+.dashboard-title {
+    color: #343a40;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.dashboard-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+.status-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+}
+
+.status-card .card-body {
+    padding: 25px 15px;
+}
+
+.accepted-card {
+    border-left: 5px solid #28a745;
+}
+
+.status-icon {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.table {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+    border: none;
+    padding: 15px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+.btn-action {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.case-description {
+    max-width: 250px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.table-responsive {
+    border-radius: 8px;
+}
+
